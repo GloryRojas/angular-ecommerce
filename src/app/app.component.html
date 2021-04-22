@@ -1,0 +1,19 @@
+<input type="text" [(ngModel)]="title" />
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'nico'">nico</p>
+  <p *ngSwitchCase="'juli'">juli</p>
+  <p *ngSwitchCase="'cami'">cami</p>
+  <p *ngSwitchDefault>todes</p>
+</div>
+
+<ul>
+  <li *ngIf="!products.length">La lista esta vacia</li>
+  <li *ngFor="let product of products">
+    <p>{{ product.title }}</p>
+    <img [src]="product.image" alt="Image" />
+    <p>{{ product.price }}</p>
+  </li>
+</ul>
+
+
