@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from './product.model';
+import { Product } from '../product.model';
 
 @Component({
   selector: 'app-root',
@@ -52,4 +52,7 @@ export class AppComponent {
       description: 'bla bla bla bla bla'
     }
   ];
+  clickProduct(data: object) {
+    console.log('product', data);
+  }
 }
