@@ -14,4 +14,12 @@
   img{
     width: 100px;
   }
+  button{
+    appearance: none;
+    border: 1px solid skyblue;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: transparent;
+    margin: 8px;
+  }
 }
