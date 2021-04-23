@@ -9,6 +9,9 @@ import { ExponentialPipe } from './exponential.pipe';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     ProductsComponent,
     ContactComponent,
+    FooterComponent,
+    HeaderComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
