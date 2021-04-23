@@ -8,10 +8,6 @@ import {Product} from '../../product.model';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
   products: Product[] = [
     {
       id: '1',
@@ -56,7 +52,11 @@ export class ProductsComponent implements OnInit {
       description: 'bla bla bla bla bla'
     }
   ];
-  clickProduct(data: object) {
+  clickProduct(data: object): void {
     console.log('product', data);
+  }
+  constructor() { }
+
+  ngOnInit(): void {
   }
 }

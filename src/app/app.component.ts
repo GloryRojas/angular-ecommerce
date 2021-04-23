@@ -7,6 +7,4 @@ import { Product } from '../product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'productos';
-
 }
