@@ -4,6 +4,9 @@ import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {ExponentialPipe} from './pipes/exponential/exponential.pipe';
 import {RouterModule} from '@angular/router';
+import {MaterialModule} from '../material/material.module';
+import {MatIconModule} from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import {RouterModule} from '@angular/router';
   exports: [
     ExponentialPipe,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule,
+    MatIconModule,
+    MatBadgeModule
   ]
 })
 export class SharedModule { }
