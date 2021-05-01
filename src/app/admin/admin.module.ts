@@ -5,15 +5,18 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MaterialModule} from '../material/material.module';
+import { NavComponent } from './components/nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 @NgModule({
-  declarations: [ProductFormComponent],
+  declarations: [ProductFormComponent, NavComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    LayoutModule,
   ]
 })
 export class AdminModule { }
