@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
-import {ContactComponent} from './components/contact/contact.component';
+import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ContactComponent
+    component: PageNotFoundComponent
   }
 ];
 
@@ -18,6 +18,6 @@ const routes: Routes = [
   ]
 })
 
-export class  ContactRoutingModule {
+export class  PageNotFoundRoutingModule {
 
 }
