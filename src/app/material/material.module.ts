@@ -9,6 +9,10 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [],
@@ -31,7 +35,11 @@ import {MatListModule} from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatSortModule,
   ],
   exports: [
     MatButtonModule,
@@ -46,7 +54,11 @@ import {MatListModule} from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatTableModule,
+    MatListModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatSortModule,
   ]
 })
 export class MaterialModule { }
