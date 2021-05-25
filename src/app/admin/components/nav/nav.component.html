@@ -6,8 +6,10 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="/admin/create">Crear producto</a>
+      <a mat-list-item href="/admin">Hoome</a>
+      <a mat-list-item href="/admin/table">Inventari</a>
       <a mat-list-item href="/admin/products">Products</a>
-      <a mat-list-item href="#">Link 3</a>
+      <button mat-list-item (click)="logout()">Cerrar Sesión </button>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
