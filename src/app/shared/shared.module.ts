@@ -7,6 +7,7 @@ import {RouterModule} from '@angular/router';
 import {MaterialModule} from '../material/material.module';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,15 @@ import {MatBadgeModule} from '@angular/material/badge';
   exports: [
     ExponentialPipe,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     MaterialModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    ReactiveFormsModule,
   ]
 })
 export class SharedModule { }

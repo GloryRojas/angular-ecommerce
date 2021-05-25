@@ -13,6 +13,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSortModule} from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [],
@@ -40,6 +41,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatGridListModule,
     MatMenuModule,
     MatSortModule,
+    MatFormFieldModule,
   ],
   exports: [
     MatButtonModule,
@@ -59,6 +61,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatGridListModule,
     MatMenuModule,
     MatSortModule,
+    MatFormFieldModule,
   ]
 })
 export class MaterialModule { }
