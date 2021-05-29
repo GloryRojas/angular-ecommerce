@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {ProductsService} from '../../../core/services/products/products.service';
 import {Product} from '../../../core/models/product.model';
+import {switchMap} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-product-detail',
@@ -9,7 +11,7 @@ import {Product} from '../../../core/models/product.model';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
-  product: Product;
+  product$: Observable<Product>;
 
   constructor(
     private route: ActivatedRoute,
@@ -17,19 +19,14 @@ export class ProductDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params: Params) => {
-      const { id } = params;
-      this.fetchProducts(id);
-    });
+    this.product$ = this.route.params
+      .pipe(
+        switchMap((params: Params) => {
+          return this.productsService.getProduct(params.id);
+        })
+      );
   }
 
-  fetchProducts(id: string) {
-    this.productsService.getProduct(id)
-      .subscribe(resp => {
-        console.log({resp});
-        this.product = resp;
-      });
-  }
   createProduct() {
     const newProduct: Product = {
       id: '222',
@@ -57,6 +54,13 @@ export class ProductDetailComponent implements OnInit {
     this.productsService.deleteProduct('222')
       .subscribe(product => {
         console.log(product);
+      });
+  }
+
+  getRandomUsers(){
+    this.productsService.getRandomUsers()
+      .subscribe(users => {
+        console.log(users);
       });
   }
 }
